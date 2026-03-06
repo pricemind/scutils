@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "scutils"
-version = "0.1.0"
+version = "0.1.1"
 description = "Scrapy Cluster utilities"
 authors = ["Ludmil Simeonov <lsimeonov@stellion.net>"]
 license = "MIT"
@@ -12,7 +12,7 @@ redis = "^3.5.3"
 kazoo = "^2.4.0"
 mock = "^2.0.0"
 testfixtures = "^6.0.2"
-ujson = "^1.35"
+ujson = "^5.7"
 future = "^0.16.0"
 [tool.poetry.dev-dependencies]
 

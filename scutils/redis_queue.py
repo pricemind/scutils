@@ -45,7 +45,12 @@ class Base(object):
         if self.encoding.__name__ == 'pickle':
             return self.encoding.dumps(item, protocol=-1).decode('latin1')
         elif isinstance(self.encoding, type(ujson)):
-            return self.encoding.dumps(item, reject_bytes=False)
+            try:
+                return self.encoding.dumps(item, reject_bytes=False)
+            except TypeError:
+                if isinstance(item, (bytes, bytearray)):
+                    item = item.decode('utf-8')
+                return self.encoding.dumps(item)
         else:
             return self.encoding.dumps(item)
 

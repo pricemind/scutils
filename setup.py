@@ -21,7 +21,7 @@ install_requires = [
     'kazoo>=2.4.0', # Updated from 2.2.1
     'mock>=2.0.0',
     'testfixtures>=6.0.2', # Updated from testfixtures==4.13.5
-    'ujson>=1.35',
+    'ujson>=5.7',
     'future>=0.16.0'
 ]
 
